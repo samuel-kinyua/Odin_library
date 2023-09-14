@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(244, 229, 29);
+}
+.addbooks{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+
+
+}
+#add{
+    color: aliceblue;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: black;
+    margin-bottom: 20px;
+    border: none;
+
+
+}
+input{
+    justify-content: space-between;
+    margin-bottom: 20px;
+    /* padding-right: 150px; */
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+#read{
+    margin-bottom: 10px;
+    width: 16px;
+    height: 16px;
+}
+.bookcard{
+    border: 2px solid blanchedalmond;
+    width: 200px;
+}
