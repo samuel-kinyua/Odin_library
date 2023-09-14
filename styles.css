@@ -1,5 +1,10 @@
 body{
     background-color: rgb(244, 229, 29);
+    background-image: url(./pexels-janko-ferlic-590493.jpg);
+    /* background-position: 25% 25%; */
+}
+#logo{
+    color: beige;
 }
 .addbooks{
     display: flex;
@@ -12,7 +17,7 @@ body{
 
 
 }
-#add{
+#newbook{
     color: aliceblue;
     padding: 10px;
     padding-left: 50px;
@@ -44,4 +49,15 @@ input{
 .bookcard{
     border: 2px solid blanchedalmond;
     width: 200px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+#addbookbtn{
+    margin-top: 20px;
+    padding: 10px 5em 10px 5em;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: burlywood;
+    border: none;
 }
