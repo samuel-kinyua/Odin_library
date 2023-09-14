@@ -4,9 +4,9 @@ body{
     /* background-position: 25% 25%; */
 }
 #logo{
-    color: beige;
+    color: burlywood;
 }
-.addbooks{
+#addbooks{
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -60,4 +60,5 @@ input{
     border-radius: 10px;
     background-color: burlywood;
     border: none;
+    margin-bottom: 20px;
 }

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./bookObj.js"></script> 
+    <script defer src="./bookObj.js"></script> 
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -14,21 +14,21 @@
 
    
    
-   <form action="./bookObj.js" method="post" class="addbooks">
-    <BUtton id="newbook">New Book</BUtton>
+   <form id="addbooks">
+    <BUtton type="submit" id="newbook">New Book</BUtton>
     <input type="text" name="title" id="title" placeholder="tittle" >
     <input type="text" name="author" id="author" placeholder="author" >
     <input type="text" name="pages" id="pages" placeholder="pages" >
     <input type="checkbox" name="read" id="read" placeholder="read" value="not read">
     <label for="read">I have read</label>
-    <button id="addbookbtn" type="button">Add Book</button>
+    <button id="addbookbtn" type="submit">Add Book</button>
    </form>
    <div class="bookcard">
     <img src="./The Riverand source.jpg" alt="cover of th river and the source book" width="100%">
-    <div class="bookauthor">author</div> 
-    <div class="booktittle">title</div> 
-    <div class="pagescount">pages</div> 
-    <div class="readstatus">read status</div>
+    <div id="bookauthor">author</div> 
+    <div id="booktitle">title</div> 
+    <div id="pagescount">pages</div> 
+    <div id="readstatus">read status</div>
 
    </div>
 </body>

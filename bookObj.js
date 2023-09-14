@@ -1,3 +1,9 @@
+
+
+
+
+const myLibrary = [];
+// Object constructor to create the book object
 function book(title,auther,pages,read){
 	this.title = title,
 	this.auther = auther,
@@ -12,12 +18,29 @@ function book(title,auther,pages,read){
 	
 	
 };
-const theRiverAndTheSource = new book('The River and The Source', 'Margaret.A.Ogola',324, 'not read yet');
-const bestRead = new book('WHEN THE STARS ARE SCATTERED', "SAM KAHIGA",298, "HAVE READ");
-console.log(bestRead.info());
-console.log(theRiverAndTheSource.info());
+ const theRiverAndTheSource = new book('The River and The Source', 'Margaret.A.Ogola',324, 'not read yet');
 
-book.prototype.sayHello = function() {
-   console.log("Hello, I'm a player!");
+//  function to add book to myLibrary array from user input in form
+
+function addBookToLibrary(){
+	
+	let newBook = new book(title,author,pages,read);
+		myLibrary.push(newBook);
+	
+
 }
-document.getElementsByClassName(addbook).backroundcolor = "red";
+
+document.getElementById("addbooks").addEventListener('submit', function(event){
+	event.preventDefault();
+	let title = document.getElementById("title").value;
+	let author = document.getElementById("author").value;
+	let pages = document.getElementById("pages").value;
+	let read = "read";
+	console.log(title, pages, author);
+	
+	addBookToLibrary(title, author, pages, read);
+  console.log(myLibrary);
+
+} );
+
+console.log(myLibrary);
