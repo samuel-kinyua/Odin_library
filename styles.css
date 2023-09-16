@@ -17,18 +17,28 @@ body{
 
 
 }
-#newbook{
+#newbookbtn{
     color: aliceblue;
     padding: 10px;
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 20px;
     font-size: 20px;
-    background-color: black;
+    background-color: burlywood;
     margin-bottom: 20px;
     border: none;
 
 
+
+}
+.button{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  
+    justify-content: center;
 }
 input{
     justify-content: space-between;
@@ -48,11 +58,17 @@ input{
 }
 .bookcard{
     border: 2px solid blanchedalmond;
-    width: 200px;
-    background-color: white;
+    
+    background-color: burlywood;
     border-radius: 5px;
+    
+   
+    
     padding: 10px;
+    margin-bottom: 10px;
 }
+
+
 #addbookbtn{
     margin-top: 20px;
     padding: 10px 5em 10px 5em;
@@ -62,3 +78,27 @@ input{
     border: none;
     margin-bottom: 20px;
 }
+
+/* function render(){
+	let libraryElement = document.getElementsByClassName('bookcard');
+	let libraryElement = "";
+	for(let i = 0; i < myLibrary.length; i++){
+		let book = myLibrary[i];
+		let bookElement = document.createElement("div");
+		bookElement.innerHTML = `<p>${book.title}</p>`;
+		libraryElement.appendChild(bookElement);
+
+	}
+
+    function addBookToLibrary(){
+	let title = document.getElementById('title').value;
+	let author = document.getElementById('author').value;
+	let pages = document.getElementById('pages').value;
+	let read = document.getElementById('read').checked; // Use .checked to get the checkbox state
+	let newBook = new Book(title, author, pages, read);
+	myLibrary.push(newBook);
+	render();
+	
+
+};
+}; */

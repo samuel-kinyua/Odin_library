@@ -12,10 +12,11 @@
 <body>
     <h1 id="logo"><img src="./bx-library.svg" alt="logo" width="50px"> SAMACADE LIBRARY</h1>
 
-   
-   
-   <form id="addbooks">
-    <BUtton type="submit" id="newbook">New Book</BUtton>
+   <div class="button">
+    <BUtton type="submit" id="newbookbtn" >New Book</BUtton>
+</div>
+   <form id="addbooks" style="display: none;" >
+    
     <input type="text" name="title" id="title" placeholder="tittle" >
     <input type="text" name="author" id="author" placeholder="author" >
     <input type="text" name="pages" id="pages" placeholder="pages" >
@@ -24,11 +25,7 @@
     <button id="addbookbtn" type="submit">Add Book</button>
    </form>
    <div class="bookcard">
-    <img src="./The Riverand source.jpg" alt="cover of th river and the source book" width="100%">
-    <div id="bookauthor">author</div> 
-    <div id="booktitle">title</div> 
-    <div id="pagescount">pages</div> 
-    <div id="readstatus">read status</div>
+    
 
    </div>
 </body>
