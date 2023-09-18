@@ -26,7 +26,9 @@ function render(){
 		 <h1>Title: ${book.title}</h1>
 		 <h3>Author: ${book.author}</h3>
 		 <h3>Pages: ${book.pages}</h3>
-		 <button class='removebook' onclick="removeBook(${i})">Remove</button?
+		 <p class='read-status'> ${book.read ? "Read" : "not Read yet"}</p>
+		 <button class='bookread' onclick="toggleRead(${i})">Read</button>
+		 <button class='removebook' onclick="removeBook(${i})">Remove</button>
 		 </div>`
 	
 		libraryElement.appendChild(bookElement);
@@ -46,12 +48,20 @@ function addBookToLibrary(){
 	let title = document.getElementById("title").value;
 	let author = document.getElementById("author").value;
 	let pages = document.getElementById("pages").value;
-	let read = document.getElementById("read").ariaChecked;
+	let read = document.getElementById("read").checked;
 	let newBook = new book(title,author,pages,read);
 	myLibrary.push(newBook);
 	render();
 
-	
+}
+
+book.prototype.toggleRead = function(){
+	this.read = !this.read;
+};
+function toggleRead(index){
+	myLibrary[index].toggleRead();
+	render();
+
 
 }
 
