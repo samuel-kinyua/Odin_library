@@ -23,14 +23,21 @@ function render(){
 		let book = myLibrary[i];
 		let bookElement = document.createElement("div");
 		bookElement.innerHTML = ` <div class='bookcard'>
-		 <div><h1>Title: ${book.title}</h1></div>
-		 <div><h3>Author: ${book.author}</h3></div>
-		 <div><h3>Pages: ${book.pages}</h3></div>
+		 <h1>Title: ${book.title}</h1>
+		 <h3>Author: ${book.author}</h3>
+		 <h3>Pages: ${book.pages}</h3>
+		 <button class='removebook' onclick="removeBook(${i})">Remove</button?
 		 </div>`
 	
 		libraryElement.appendChild(bookElement);
 
 	}
+};
+
+//make the delete button to delete unwanted books
+function removeBook(index){
+	myLibrary.splice(index, 1);
+	render();
 };
 
 //  function to add book to myLibrary array from user input in form
@@ -43,6 +50,7 @@ function addBookToLibrary(){
 	let newBook = new book(title,author,pages,read);
 	myLibrary.push(newBook);
 	render();
+
 	
 
 }
@@ -60,7 +68,7 @@ document.getElementById("addbooks").addEventListener('submit', function(event){
 
 } );
 
-console.log(myLibrary);
+
 
 // make the add book button to show the form on click
 
@@ -71,3 +79,4 @@ addBookBtn.addEventListener('click', function(){
 	newBookForm.style.display = "flex";
 
 })
+
